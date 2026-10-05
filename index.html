@@ -14,19 +14,21 @@ h1{font-size:clamp(2.4rem,7vw,5rem);margin:.2em 0;line-height:1}
 .card{background:#0e151dcc;border:1px solid #1f2d3a;border-radius:14px;padding:20px;backdrop-filter:blur(8px);transition:transform .15s,border-color .2s}
 .card:hover{border-color:var(--ac)}a{color:var(--ac)}
 .btn{display:inline-block;margin:6px 8px 0 0;padding:10px 18px;border:1px solid var(--ac);border-radius:8px;text-decoration:none}
-.btn:hover{background:var(--ac);color:#000}.tag{font-size:.75rem;color:var(--mut);margin:6px 0}
+.btn:hover{background:var(--ac);color:#000}.tag{font-size:.75rem;color:var(--mut);margin:6px 0}.hook{font-size:clamp(1.35rem,3vw,2rem);margin:20px 0 4px;max-width:720px;font-weight:650}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 8px}.chips span{font:12px ui-monospace,monospace;color:var(--mut);border:1px solid #243442;border-radius:999px;padding:5px 10px;background:#0b1118aa}.workintro{max-width:760px;color:var(--mut);margin:4px 0 18px}.card h3{margin-top:0}.project-note{font-size:.86rem;color:#b5c4d4;margin:10px 0 14px}.label{color:var(--ac);font:11px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em}
 </style></head><body>
 <canvas id="bg"></canvas>
 <main>
 <section id="home">
 <img class="me" src="https://avatars.githubusercontent.com/u/316526234?v=4&s=280" alt="Prabhjot Singh" width="140" height="140">
-<p class="mono">&gt; hello, world</p>
+<p class="mono">&gt; hello, world · first-year builder</p>
 <h1>Prabhjot <span class="ac">Singh</span></h1>
 <p class="mono">B.Tech CSE · IK Gujral Punjab Technical University, Kapurthala</p>
-<p>Building a strong foundation in C, then C++, DSA and systems programming — and contributing to real open-source code.</p>
+<p class="hook">I don’t just learn code. <span class="ac">I build with it.</span></p>
+<p>From a C banking system to machine learning and open-source codebases, I’m turning what I learn into things I can actually test, break, improve and share.</p>
+<div class="chips"><span>C</span><span>C++</span><span>DSA</span><span>Open Source</span><span>Machine Learning</span></div>
 <div><a class="btn" href="#work">Projects</a><a class="btn" href="https://github.com/prabhtheone" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/prabhjot-singh-6aa788432" rel="noopener">LinkedIn</a></div>
 </section>
-<section id="work"><h2 class="ac">&gt; projects</h2><div class="grid" id="projects"></div></section>
+<section id="work"><h2 class="ac">&gt; projects</h2><p class="workintro">These aren’t just portfolio screenshots. Each project represents something I’m learning — software design, persistence, machine learning, testing, debugging, or working inside a real open-source codebase.</p><div class="grid" id="projects"></div></section>
 <section id="learn"><h2 class="ac">&gt; learning path</h2>
 <p class="mono">C → build + test → C++/STL → DSA → upstream fixes → larger open source</p>
 <p>Now: pointers, structs, dynamic memory, file I/O, testing. Open source: OmniRoute, ScummVM, Cypherock firmware.</p></section>
@@ -35,18 +37,19 @@ h1{font-size:clamp(2.4rem,7vw,5rem);margin:.2em 0;line-height:1}
 <script src="config.js"></script>
 <script>
 const DEFAULTS=[
-{title:'banking-system',description:'Console banking system in C: authentication, binary-file persistence, transfers, history, automated tests and CI.',url:'https://github.com/prabhtheone/banking-system',tags:'C · CI'},
-{title:'Crop-AI',description:'Computer-vision crop classification and Guava quality grading with a two-stage EfficientNetB0 pipeline.',url:'https://github.com/prabhtheone/Crop-AI',tags:'Python · TensorFlow'},
-{title:'ledger-fintech-demo',description:'Interactive FinTech demo: wallets, transfers, budgets, dashboards and simulated fraud checks.',url:'https://github.com/prabhtheone/ledger-fintech-demo',tags:'React · Tailwind'},
-{title:'OmniRoute',description:'Open-source AI gateway — investigating issues and preparing upstream fixes.',url:'https://github.com/prabhtheone/OmniRoute',tags:'Open source'}];
+{title:'banking-system',description:'A console banking system built in C with authentication, binary-file persistence, transfers and transaction history.',note:'What it shows: working with files, structs, functions, validation and automated testing/CI.',url:'https://github.com/prabhtheone/banking-system',tags:'C · File I/O · Testing'},
+{title:'CNN Model',description:'A computer-vision project exploring image classification and Guava quality grading with a two-stage EfficientNetB0 pipeline.',note:'What it shows: turning ML concepts into a working image-classification pipeline and experimenting with model training.',url:'https://github.com/prabhtheone/Crop-AI',tags:'Python · TensorFlow · CNN'},
+{title:'ledger-fintech-demo',description:'An interactive FinTech demo covering wallets, transfers, budgets, dashboards and simulated fraud checks.',note:'What it shows: building a user-facing interface around financial workflows and keeping the experience interactive.',url:'https://github.com/prabhtheone/ledger-fintech-demo',tags:'React · Tailwind · FinTech'},
+{title:'OmniRoute',description:'An open-source AI gateway where I’m learning how a larger codebase is structured and working through real issues.',note:'What it shows: reading unfamiliar code, debugging, testing changes and preparing upstream contributions.',url:'https://github.com/prabhtheone/OmniRoute',tags:'Open Source · Debugging'}];
 function render(list){const g=document.getElementById('projects');g.textContent='';
 list.forEach(p=>{const c=document.createElement('div');c.className='card';
 const h=document.createElement('h3');h.textContent=p.title;
 const d=document.createElement('p');d.textContent=p.description||'';
 const t=document.createElement('div');t.className='tag';t.textContent=p.tags||'';
+const n=document.createElement('p');n.className='project-note';n.textContent=p.note||'';
 const a=document.createElement('a');a.textContent='View project →';a.rel='noopener';
 if(/^https:\/\//.test(p.url||''))a.href=p.url;
-c.append(h,d,t,a);
+c.append(h,d,t,n,a);
 c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(600px) rotateY(${x*12}deg) rotateX(${-y*12}deg)`});
 c.addEventListener('mouseleave',()=>c.style.transform='');g.append(c)})}
 render(DEFAULTS);
