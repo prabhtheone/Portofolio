@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://prabhtheone-portfolio-4sjrr8s5s-prabhtheones-projects.vercel.app">🌐 Live Portfolio</a> •
+  <a href="https://prabhtheone.vercel.app">🌐 Live Portfolio</a> •
   <a href="https://github.com/prabhtheone">GitHub</a> •
   <a href="https://www.linkedin.com/in/prabhjot-singh-6aa788432">LinkedIn</a>
 </p>
@@ -16,18 +16,18 @@ I'm **Prabhjot Singh**, a **first-year B.Tech Computer Science & Engineering stu
 
 I'm building strong foundations in **C, C++, DSA and systems programming**, while exploring machine learning and contributing to open-source projects. I enjoy turning what I learn into practical projects and improving my skills through real code.
 
-## 🚀 Live Website
+## 🌐 Live Website
 
-**[Visit my portfolio →](https://prabhtheone-portfolio-4sjrr8s5s-prabhtheones-projects.vercel.app)**
+**[Visit my portfolio →](https://prabhtheone.vercel.app)**
 
-The portfolio includes my introduction, projects, learning path, GitHub and LinkedIn links, and an interactive project section.
+The portfolio is designed as a personal developer space: project cards open an in-site project view first, then take visitors to the repository. It also highlights my student journey, Campus Ambassador experience and current Hacktoberfest participation.
 
 ## ✨ Highlights
 
 - Personal portfolio with a dark, developer-focused interface
-- Interactive animated background
+- Interactive animated 3D background with lightweight mouse/parallax effects
 - Responsive design for desktop and mobile
-- Project cards with GitHub links
+- Interactive project detail cards with dedicated repository actions
 - Supabase-backed project data with fallback project information
 - Protected admin dashboard for managing projects
 - Row Level Security (RLS) for project management
@@ -99,7 +99,7 @@ cd Portofolio
 
 The website is deployed using **Vercel** and is connected to the GitHub repository. Updates pushed to the main branch can be deployed automatically.
 
-**Live:** [prabhtheone-portfolio](https://prabhtheone-portfolio-4sjrr8s5s-prabhtheones-projects.vercel.app)
+**Live:** [prabhtheone-portfolio](https://prabhtheone.vercel.app)
 
 ## 🔐 Security
 
@@ -110,6 +110,13 @@ The portfolio uses:
 - Authenticated owner-only project management
 - Content Security Policy and related security headers
 - Client-side use of only the Supabase publishable/anon key
+
+## 🏆 Current Journey
+
+- **Campus Ambassador — Tata Imagination Challenge**
+- **Hacktoberfest — currently contributing to open source**
+- First-year B.Tech CSE student building stronger C/C++ and DSA fundamentals
+- Exploring systems programming, machine learning and real-world open-source development
 
 ## 📌 Goals
 
@@ -129,7 +136,7 @@ If you spot an issue, feel free to open an issue or submit a pull request.
 
 - **GitHub:** https://github.com/prabhtheone
 - **LinkedIn:** https://www.linkedin.com/in/prabhjot-singh-6aa788432
-- **Portfolio:** https://prabhtheone-portfolio-4sjrr8s5s-prabhtheones-projects.vercel.app
+- **Portfolio:** https://prabhtheone.vercel.app
 
 ---
 
