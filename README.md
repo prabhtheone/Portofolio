@@ -42,6 +42,7 @@ The portfolio is designed as a personal developer space: project cards open an i
 | [CNN Model](https://github.com/prabhtheone/Crop-AI) | CNN-based machine-learning work exploring image classification and computer-vision fundamentals. | Python, TensorFlow, CNN |
 | [Ledger FinTech Demo](https://github.com/prabhtheone/ledger-fintech-demo) | Interactive fintech ledger demo with wallets, transfers, budgets, dashboards and simulated fraud checks. | React, Tailwind |
 | [OmniRoute](https://github.com/prabhtheone/OmniRoute) | Open-source AI gateway project with engineering improvements and upstream contribution work. | Open Source |
+| [FirstPR-AI](https://github.com/prabhtheone/FirstPR-AI) | AI-assisted open-source toolkit with issue analysis, codebase exploration, test planning, PR mentoring and contribution-safety checks; local Ollama workflow. | Python, Gradio, Ollama |
 
 ## 🛠️ Tech Stack
 
